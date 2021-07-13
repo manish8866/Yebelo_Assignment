@@ -8,6 +8,7 @@ public class YebeloApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(YebeloApplication.class, args);
+		System.out.println("started");
 	}
 
 }

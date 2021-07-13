@@ -2,6 +2,7 @@ package com.example.yebelo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table(name = "Numbers")
@@ -9,7 +10,7 @@ import javax.persistence.Table;
 public class EntityClass {
 
 	@Id
-	@GeneratedValue()
+	@GeneratedValue
 	private Integer categoryCode;
 	private Integer newNumber;
 	private Integer oldNumber;

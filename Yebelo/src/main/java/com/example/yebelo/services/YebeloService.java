@@ -13,12 +13,8 @@ public class YebeloService {
 
 	public Integer generateNewNumber(Integer n)
 	{
-		1>10
-		10>19>1+9=10>1+0=1
-		19>28->2+9=10>1+0=1
-		28>37
 		n=n+1;
-		 int sum = 0;
+		int sum = 0;
 	    
 	    // Loop to do sum while
 	    // sum is not less than
@@ -35,7 +31,7 @@ public class YebeloService {
 	    }
 	    if(sum!=1)
 	    	sum=generateNewNumber(n+2);
-	    return sum;
+	    return n;
 	}
 	@Autowired
 	private EntityManager entityManager;
@@ -44,7 +40,7 @@ public class YebeloService {
 	public EntityClass getNumbers(Integer categoryCode) {
 		EntityClass oldEntity=yebeloRepository.getById(categoryCode);
 		int oldnum=oldEntity.getNewNumber();
-		
+		System.out.println(oldnum);
 		return null;
 	}
 
