@@ -5,6 +5,7 @@ import javax.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.yebelo.dao.YebeloRepository;
 import com.example.yebelo.entity.EntityClass;
 
 @Service
@@ -38,8 +39,12 @@ public class YebeloService {
 	}
 	@Autowired
 	private EntityManager entityManager;
+	@Autowired
+	private YebeloRepository yebeloRepository;
 	public EntityClass getNumbers(Integer categoryCode) {
-		int 
+		EntityClass oldEntity=yebeloRepository.getById(categoryCode);
+		int oldnum=oldEntity.getNewNumber();
+		
 		return null;
 	}
 
