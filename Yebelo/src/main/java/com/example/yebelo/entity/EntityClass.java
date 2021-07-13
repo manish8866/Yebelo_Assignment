@@ -1,12 +1,16 @@
 package com.example.yebelo.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Table;
 
 @Table(name = "Numbers")
 @Entity
 public class EntityClass {
 
+	@Id
+	@GeneratedValue()
+	private Integer categoryCode;
 	private Integer newNumber;
 	private Integer oldNumber;
 
@@ -30,8 +34,17 @@ public class EntityClass {
 		super();
 	}
 
-	public EntityClass(Integer newNumber, Integer oldNumber) {
+	public Integer getCategoryCode() {
+		return categoryCode;
+	}
+
+	public void setCategoryCode(Integer categoryCode) {
+		this.categoryCode = categoryCode;
+	}
+
+	public EntityClass(Integer categoryCode, Integer newNumber, Integer oldNumber) {
 		super();
+		this.categoryCode = categoryCode;
 		this.newNumber = newNumber;
 		this.oldNumber = oldNumber;
 	}

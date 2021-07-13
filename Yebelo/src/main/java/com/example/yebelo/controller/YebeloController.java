@@ -2,6 +2,7 @@ package com.example.yebelo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,9 +15,9 @@ public class YebeloController {
 	@Autowired
 	private YebeloService yebeloService;
 	@GetMapping("/FetchNextNumber")
-	public EntityClass getNumbers()
+	public EntityClass getNumbers(@RequestBody Integer categoryCode)
 	{
-		return yebeloService.getNumbers();
+		return yebeloService.getNumbers(categoryCode);
 		
 	}
 }
